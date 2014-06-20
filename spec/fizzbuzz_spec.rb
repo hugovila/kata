@@ -9,6 +9,7 @@ RSpec.describe "Fizzbuzz" do
   it "return same number" do
   	expect(fb.fizzbuzz(1)).to eq(1)
   	expect(fb.fizzbuzz(2)).to eq(2)
+  	expect(fb.fizzbuzz(4)).to eq(4)
   end
 
   it "return Fizz for number 3" do
