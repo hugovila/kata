@@ -3,7 +3,7 @@
 class Fizzbuzz
 
 def fizzbuzz a_number
-  1
+  a_number
 end
 
 end
