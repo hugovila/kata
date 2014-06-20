@@ -1,9 +1,9 @@
-# class_name.rb
+# fizzbuzz.rb
 
 class Fizzbuzz
 
-def fizzbuzz
-
+def fizzbuzz a_number
+  1
 end
 
 end
