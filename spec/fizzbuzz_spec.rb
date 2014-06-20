@@ -16,5 +16,9 @@ RSpec.describe "Fizzbuzz" do
   	expect(fb.fizzbuzz(3)).to eq("Fizz")
   end
 
+  it "return Buzz for number 5" do
+  	expect(fb.fizzbuzz(5)).to eq("Buzz")
+  end
+
 end
 
