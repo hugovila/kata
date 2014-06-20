@@ -12,6 +12,7 @@ RSpec.describe "Fizzbuzz" do
   	expect(fb.fizzbuzz(4)).to eq(4)
   	expect(fb.fizzbuzz(7)).to eq(7)
   	expect(fb.fizzbuzz(8)).to eq(8)
+  	expect(fb.fizzbuzz(11)).to eq(11)
   end
 
   it "return Fizz for number multiple 3" do
@@ -20,8 +21,9 @@ RSpec.describe "Fizzbuzz" do
   	expect(fb.fizzbuzz(9)).to eq("Fizz")
   end
 
-  it "return Buzz for number 5" do
+  it "return Buzz for number multiple 5" do
   	expect(fb.fizzbuzz(5)).to eq("Buzz")
+  	expect(fb.fizzbuzz(10)).to eq("Buzz")
   end
 
 end
