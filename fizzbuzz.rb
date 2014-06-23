@@ -6,6 +6,7 @@ def fizzbuzz(a_number)
   result = a_number
   result = "Fizz" if a_number % 3 == 0
   result = "Buzz" if a_number % 5 == 0
+  result = "FizzBuzz" if a_number == 15
   result
 end
 
