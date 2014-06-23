@@ -3,7 +3,9 @@
 class Fizzbuzz
 
 def fizzbuzz(a_number)
-  result = a_number if a_number == 1 || a_number == 2
+  result = a_number
+  result = "Fizz" if a_number == 3
+  result
 end
 
 end
