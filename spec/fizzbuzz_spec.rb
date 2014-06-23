@@ -6,8 +6,9 @@ fb = Fizzbuzz.new
 
 RSpec.describe "FizzBuzz" do
 
-  it "return 1" do
+  it "return the same number" do
   	expect(fb.fizzbuzz(1)).to eq(1)
+  	expect(fb.fizzbuzz(2)).to eq(2)
   end
 
 end
