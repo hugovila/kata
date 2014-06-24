@@ -1,13 +1,21 @@
-# class_name_spec.rb
+# mars_rover_spec.rb
 
-require './class_name'
+require './mars_rover'
 
-instancia = Class_name.new
+mr = Mars_rover.new(2,4,:N)
 
-RSpec.describe "Class Name" do
+RSpec.describe "Mars Rover" do
 
-  it "__" do
-  	expect(instancia.Class_name(__)).to eq(__)
+  it "Create new instance return position" do
+  	expect(mr.my_position()).to eq([2,4])
+  end
+
+  it "Create new instance return also I look" do
+  	expect(mr.i_look()).to eq(:N)
+  end
+
+  it "pass command f rest 1 to y position" do
+  	expect(mr.i_move([:f])).to eq(3)
   end
 
 end
