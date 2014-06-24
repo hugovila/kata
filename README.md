@@ -1,4 +1,4 @@
-Kata FizzBuzz
+Kata Mars Rover
 -------------
 
 En este Coding Dojo trabajamos la kata [FizzBuzz](http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz), aplicando _baby steps_ y llevando a cabo el refactoring utilizando las siguientes técnicas:
