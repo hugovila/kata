@@ -1,10 +1,14 @@
 
 class FizzBuzz
 
-  def self.fizzbuzz(a_number)
-    result = a_number
-    result = "Fizz" if a_number == 3
+  def self.fizzbuzz(number)
+    result = number
+    result = "Fizz" if a_fizz?(number)
     result
+  end
+
+  def self.a_fizz?(number)
+  	number == 3
   end
 
 end
