@@ -4,7 +4,7 @@ class FizzBuzz
   def self.fizzbuzz(number)
     result = number
     result = "Fizz" if a_fizz?(number)
-    result = "Buzz" if number % 5 == 0
+    result = "Buzz" if a_buzz?(number)
     result
   end
 
@@ -12,6 +12,9 @@ class FizzBuzz
   	number % 3 == 0
   end
 
+  def self.a_buzz?(number)
+    number % 5 == 0
+  end
 end
 
 
