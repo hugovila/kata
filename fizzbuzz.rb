@@ -9,7 +9,7 @@ class FizzBuzz
   end
 
   def self.a_fizz?(number)
-  	number == 3
+  	number % 3 == 0
   end
 
 end
