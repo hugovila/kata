@@ -2,7 +2,7 @@
 class FizzBuzz
 
   def self.fizzbuzz(a_number)
-    1
+    a_number
   end
 
 end
