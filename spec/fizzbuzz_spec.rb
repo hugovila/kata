@@ -8,4 +8,9 @@ RSpec.describe FizzBuzz do
     expect(FizzBuzz.fizzbuzz(2)).to eq(2)
   end
 
+  it "return Fizz for number 3" do
+  	expect(FizzBuzz.fizzbuzz(3)).to eq("Fizz")
+  end
+
+
 end
