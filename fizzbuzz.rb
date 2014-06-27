@@ -4,32 +4,37 @@ class FizzBuzz
   FIZZ_NUMBER = 3
   BUZZ_NUMBER = 5
 
+
   def fizzbuzz(number)
-    result = number
-    result = "Fizz" if fizz?(number)
-    result = "Buzz" if buzz?(number)
-    result = "FizzBuzz" if fizzbuzz?(number)
+    @number = number
+    
+    result = @number
+    result = "Fizz" if fizz?
+    result = "Buzz" if buzz?
+    result = "FizzBuzz" if fizzbuzz?
     result
   end
 
-  def fizz?(number)
-  	divisible?(number, FIZZ_NUMBER) || include?(number, FIZZ_NUMBER)
+  private
+
+  def fizz?
+  	divisible?(FIZZ_NUMBER) || include?(FIZZ_NUMBER)
   end
 
-  def buzz?(number)
-  	divisible?(number, BUZZ_NUMBER) || include?(number, BUZZ_NUMBER)
+  def buzz?
+  	divisible?(BUZZ_NUMBER) || include?(BUZZ_NUMBER)
   end
 
-  def fizzbuzz?(number)
-  	fizz?(number) && buzz?(number)
+  def fizzbuzz?
+  	fizz? && buzz?
   end
 
-  def divisible?(number, other_number)
-    number % other_number == 0
+  def divisible?(other_number)
+    @number % other_number == 0
   end
 
-  def include?(number, other_number)
-    number.to_s.include? other_number.to_s
+  def include?(other_number)
+    @number.to_s.include? other_number.to_s
   end
 
 end
