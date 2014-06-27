@@ -1,13 +1,13 @@
 
 class MarsRover
 
-  attr_reader :position, :direction
+  attr_reader :direction
+  attr_accessor :position
 
   def initialize(position, direction)
     @position = position
     @direction = direction
   end
 
-  
 
 end
