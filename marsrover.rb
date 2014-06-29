@@ -9,6 +9,9 @@ class MarsRover
     @direction = initial_direction
   end
 
-  
+  def move(commands)
+    result = commands.each_char { |comand| @position[1] += 1 }
+    position
+  end
 
 end

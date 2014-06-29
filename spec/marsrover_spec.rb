@@ -15,7 +15,8 @@ RSpec.describe MarsRover do
 
   it "should move forward for 'f' command" do
     mr = MarsRover.new([2, 4], :N)
-    expect(mr.move("fff")).to eq([5, 4])
+    expect(mr.move("fff")).to eq([2, 7])
+    expect(mr.move("ffff")).to eq([2, 11])
   end
 	
 end
