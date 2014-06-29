@@ -10,7 +10,10 @@ class MarsRover
   end
 
   def move(commands)
-    result = commands.each_char { |comand| @position[1] += 1 }
+    commands.each_char do |command| 
+      @position[1] += 1 if command == "f"
+      @position[1] -= 1 if command == "b"
+    end
     position
   end
 
