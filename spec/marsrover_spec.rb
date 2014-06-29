@@ -7,5 +7,10 @@ RSpec.describe MarsRover do
   	mr = MarsRover.new([2, 4], :N)
     expect(mr.position()).to eq([2, 4])
   end
+
+  it "should return its own direction" do
+  	mr = MarsRover.new([2, 4,], :E)
+    expect(mr.direction()).to eq(:E)
+  end
 	
 end
