@@ -10,8 +10,11 @@ RSpec.describe MarsRover do
   end
   it "should move forward to 'f' commands" do
   	expect(MarsRover.new([2, 4], :S).move("ff")).to eq([2, 6])
+  	expect(MarsRover.new([2, 4], :S).move("ffff")).to eq([2, 8])
   end
-  it "should mover backward to 'b' commands" do
+  it "should move backward to 'b' commands" do
   	expect(MarsRover.new([2, 4], :W).move("bb")).to eq([2, 2])
+  	expect(MarsRover.new([2, 6], :W).move("bbb")).to eq([2, 3])
   end
+
 end

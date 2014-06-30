@@ -16,7 +16,11 @@ class MarsRover
   end
 
   def move(commands)
-    [2, 6]
+    commands.each_char do |command|
+    	position[1] += 1 if command == 'f'
+    	position[1] -= 1 if command == 'b'
+    end
+    position
   end
 
 
