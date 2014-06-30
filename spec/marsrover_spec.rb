@@ -24,4 +24,9 @@ RSpec.describe MarsRover do
   	expect(mr.move("bb")).to eq([2, 2])
   end
 
+  it "should move left for 'l' commands" do
+  	mr = MarsRover.new([2,4], :S)
+  	expect(mr.move("lll")).to eq([-1, 4])
+  end
+
 end
