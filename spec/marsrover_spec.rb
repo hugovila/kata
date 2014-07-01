@@ -15,4 +15,8 @@ RSpec.describe MarsRover do
   	expect(MarsRover.new([2, 4], :N).move("bb")).to eq([2, 2])
   	expect(MarsRover.new([2, 4], :N).move("bbb")).to eq([2, 1])
   end
+  it "should move forward and backward for 'fb' commands" do
+  	expect(MarsRover.new([2, 4], :W).move("bfb")).to eq([2, 3])
+  	expect(MarsRover.new([2, 4], :W).move("fbf")).to eq([2, 5])
+  end
 end
