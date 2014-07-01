@@ -20,7 +20,7 @@ class MarsRover
   		@position[1] += 1 if command == "f"
   		@position[1] -= 1 if command == "b"
   		@position[0] -= 1 if command == "l"
-
+        @position[0] += 1 if command == "r"
   	end 
   	@position
   end
