@@ -11,4 +11,8 @@ class MarsRover
   	@position
   end
 
+  def direction
+  	@direction
+  end
+
 end
