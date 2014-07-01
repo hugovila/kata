@@ -12,7 +12,7 @@ RSpec.describe MarsRover do
   	expect(MarsRover.new([2, 4], :E).move("fff")).to eq([2, 7])
   end
   it "should move backward for 'b' commands" do
-  	expect(MarsRover.new([2, 4], :N).move("bb")).to eq([2, 6])
-  	expect(MarsRover.new([2, 4], :N).move("bbb")).to eq([2, 7])
+  	expect(MarsRover.new([2, 4], :N).move("bb")).to eq([2, 2])
+  	expect(MarsRover.new([2, 4], :N).move("bbb")).to eq([2, 1])
   end
 end
