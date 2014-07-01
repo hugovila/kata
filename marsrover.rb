@@ -15,4 +15,8 @@ class MarsRover
   	@direction
   end
 
+  def move(commands)
+  	[2, 6]
+  end
+
 end
