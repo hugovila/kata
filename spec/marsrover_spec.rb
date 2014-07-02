@@ -26,5 +26,9 @@ RSpec.describe MarsRover do
     expect(MarsRover.new([4,8], :N).move("rr")).to eq([6, 8])
     expect(MarsRover.new([4,8], :N).move("rrr")).to eq([7, 8])
   end
+  it "should move forward, backward, left and right for 'fblr' commands" do
+    expect(MarsRover.new([4,8], :N).move("flrrb")).to eq([5, 8])
+    expect(MarsRover.new([4,8], :N).move("lrbrfbr")).to eq([6, 7])
+  end
 
 end
