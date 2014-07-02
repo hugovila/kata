@@ -18,5 +18,9 @@ RSpec.describe MarsRover do
     expect(MarsRover.new([4,8], :N).move("bb")).to eq([4, 6])
     expect(MarsRover.new([4,8], :N).move("bbb")).to eq([4, 5])
   end
+  it "should move left for 'l' commands" do
+    expect(MarsRover.new([4,8], :N).move("ll")).to eq([2, 8])
+    expect(MarsRover.new([4,8], :N).move("lll")).to eq([1, 8])
+  end
 
 end
