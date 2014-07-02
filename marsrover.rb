@@ -9,4 +9,6 @@ class MarsRover
     @direction = direction
   end
 
+  
+
 end
