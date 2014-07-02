@@ -13,6 +13,7 @@ class MarsRover
     commands.each_char do |command| 
       @position[1] += 1 if command == "f"
       @position[1] -= 1 if command == "b"
+      @position[0] -= 1 if command == "l"
      end
     position
   end
