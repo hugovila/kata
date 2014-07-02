@@ -11,7 +11,9 @@ RSpec.describe MarsRover do
   end
 
   it "should move forward for 'f' commands" do
-    expect(MarsRover.new([4,8], :N).move("ff")).to eq([4, 10]) 
+    expect(MarsRover.new([4,8], :N).move("ff")).to eq([4, 10])
+    expect(MarsRover.new([4,8], :N).move("fff")).to eq([4, 11])
   end
+  
 
 end
