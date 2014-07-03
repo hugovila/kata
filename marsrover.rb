@@ -7,11 +7,11 @@ class MarsRover
   end
 
   def position
-    [0, 0]
+    @the_position
   end
 
   def direction
-    :N
+    @the_direction
   end
 
 end
