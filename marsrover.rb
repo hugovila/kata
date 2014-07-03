@@ -1,7 +1,7 @@
 
 class MarsRover
 
-  def initialize(the_position, the_direction)
+  def initialize(the_position = [0, 0], the_direction = :N)
     @the_position = the_position
     @the_direction = the_direction
   end
