@@ -6,11 +6,11 @@ class MarsRover
     @the_direction = the_direction
   end
 
-  def position
+  def where_are_you
     @the_position
   end
 
-  def direction
+  def what_is_you_bearing
     @the_direction
   end
 
