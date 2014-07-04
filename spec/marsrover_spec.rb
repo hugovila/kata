@@ -54,5 +54,7 @@ describe MarsRover do
       expect(rover.move(new_commands)).to eq(another_new_position)
     end
   end
+
+  
   
 end
