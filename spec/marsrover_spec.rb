@@ -45,6 +45,14 @@ describe MarsRover do
       expect(rover.move(commands)).to eq(new_position)
       expect(rover.move(new_commands)).to eq(another_new_position)
     end
+    it "move forward, backward, left and right for fblr commands" do
+      commands = "fbrl"
+      new_commands = "rrlbrrff"
+      new_position = [0, 0]
+      another_new_position = [3, 1]
+      expect(rover.move(commands)).to eq(new_position)
+      expect(rover.move(new_commands)).to eq(another_new_position)
+    end
   end
   
 end

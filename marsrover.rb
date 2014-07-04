@@ -26,13 +26,23 @@ class MarsRover
 
   def move(commands)
     commands.each_char do |command|
-      @the_position[POSITION_Y] += SPEED if command == FORWARD
-      @the_position[POSITION_Y] -= SPEED if command == BACKWARD
+      forward if command == FORWARD
+      backward if command == BACKWARD
       @the_position[POSITION_X] -= SPEED if command == LEFT
       @the_position[POSITION_X] += SPEED if command == RIGHT
     end
 
     @the_position
+  end
+
+  private
+
+  def forward
+    @the_position[POSITION_Y] += SPEED
+  end
+
+  def backward
+    @the_position[POSITION_Y] -= SPEED
   end
 
 end
