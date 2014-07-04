@@ -1,6 +1,7 @@
 
 class MarsRover
 
+  POSITION_X = 0
   POSITION_Y = 1
   SPEED      = 1
 
@@ -22,6 +23,7 @@ class MarsRover
     commands.each_char do |command|
       @the_position[POSITION_Y] += SPEED if command == "f"
       @the_position[POSITION_Y] -= SPEED if command == "b"
+      @the_position[POSITION_X] -= SPEED if command == "l"
     end
 
     @the_position
