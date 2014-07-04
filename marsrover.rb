@@ -10,7 +10,7 @@ class MarsRover
     @the_position
   end
 
-  def what_is_you_bearing
+  def what_are_you_viewing
     @the_direction
   end
 
