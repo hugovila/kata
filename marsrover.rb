@@ -1,8 +1,8 @@
 
 class MarsRover
 
-  @POSITION_Y = 1
-  @SPEED      = 1
+  POSITION_Y = 1
+  SPEED      = 1
 
   def initialize(the_position = [0, 0], the_direction = :N)
     @the_position = the_position
@@ -19,8 +19,7 @@ class MarsRover
   end
 
   def move(commands)
-
-    @the_position[1] += 1
+    commands.each_char { @the_position[POSITION_Y] += SPEED }
     @the_position
   end
 

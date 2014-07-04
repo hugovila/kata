@@ -1,24 +1,26 @@
 
 require './marsrover'
 
-RSpec.describe MarsRover do
+describe MarsRover do
+
+  let(:rover) {  MarsRover.new }
 
   it "take position and direction" do
     the_position = [0, 0]
     the_direction = :N
-    mr = MarsRover.new()
-    expect(mr.where_are_you()).to eq(the_position)
-    expect(mr.what_are_you_viewing()).to eq(the_direction)
-
-
+    expect(rover.where_are_you()).to eq(the_position)
+    expect(rover.what_are_you_viewing()).to eq(the_direction)
   end
-  describe "move when passing commands and" do
-    it "should move forward for f commands" do
-      rover = MarsRover.new()
+
+  describe "move when passing commands" do
+    it "move forward for f commands" do
       commands = "f"
-      expect(rover.move(commands)).to eq([0, 1])
+      new_commands = "ffff"
+      new_position = [0, 1]
+      another_new_position = [0, 5]
+      expect(rover.move(commands)).to eq(new_position)
+      expect(rover.move(new_commands)).to eq(another_new_position)
     end
-    
   end
   
 end
