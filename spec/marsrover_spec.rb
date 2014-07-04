@@ -21,6 +21,14 @@ describe MarsRover do
       expect(rover.move(commands)).to eq(new_position)
       expect(rover.move(new_commands)).to eq(another_new_position)
     end
+    it "move backward for b commands" do
+      commands = "b"
+      new_commands = "bbbb"
+      new_position = [0, -1]
+      another_new_position = [0, -5]
+      expect(rover.move(commands)).to eq(new_position)
+      expect(rover.move(new_commands)).to eq(another_new_position)
+    end
   end
   
 end
