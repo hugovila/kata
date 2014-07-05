@@ -26,11 +26,14 @@ class MarsRover
     @the_direction
   end
 
+  def what_are_you_bearing
+    @the_direction
+  end
+
   def move(commands)
     commands.each_char do |command|
       FUNCTION_MAP[command].call
-  end
-
+    end
     @the_position
   end
 
