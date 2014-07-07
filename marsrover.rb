@@ -14,7 +14,12 @@ class MarsRover
   def initialize(the_position = [0, 0], the_direction = :N)
     @the_position = the_position
     @the_direction = the_direction
-    @function_map = { FORWARD => lambda{forward()}, BACKWARD => lambda{backward()}, LEFT => lambda{left()}, RIGHT => lambda{right()} }
+    @command_map = { 
+      FORWARD => lambda{forward()}, 
+      BACKWARD => lambda{backward()}, 
+      LEFT => lambda{left()}, 
+      RIGHT => lambda{right()} 
+    }
   end
 
   
@@ -32,9 +37,9 @@ class MarsRover
 
   def move(commands)
     commands.each_char do |command|
-      @function_map[command].call
+      @command_map[command].call
     end
-    @the_position
+    where_are_you
   end
 
   private
