@@ -10,14 +10,14 @@ class MarsRover
   LEFT = "l"
   RIGHT = "r"
 
-  FUNCTION_MAP = { FORWARD => lambda{forward()}, BACKWARD => lambda{backward()}, LEFT => lambda{left()}, RIGHT => lambda{right()} }
 
   def initialize(the_position = [0, 0], the_direction = :N)
     @the_position = the_position
     @the_direction = the_direction
+    @function_map = { FORWARD => lambda{forward()}, BACKWARD => lambda{backward()}, LEFT => lambda{left()}, RIGHT => lambda{right()} }
   end
 
-
+  
   def where_are_you
     @the_position
   end
@@ -32,12 +32,12 @@ class MarsRover
 
   def move(commands)
     commands.each_char do |command|
-      FUNCTION_MAP[command].call
+      @function_map[command].call
     end
     @the_position
   end
 
-  # private
+  private
 
   def forward
     @the_position[POSITION_Y] += SPEED
