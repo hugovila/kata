@@ -65,7 +65,12 @@ class MarsRover
   end
 
   def spin_left
-    @the_direction = :W
+    result = @the_direction
+    result = @the_direction = :W if what_are_you_bearing == :N
+    result = @the_direction = :S if what_are_you_bearing == :W
+    result = @the_direction = :E if what_are_you_bearing == :S
+    result = @the_direction = :N if what_are_you_bearing == :E
+    return result
   end
 
 end
