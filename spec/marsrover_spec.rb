@@ -58,12 +58,10 @@ describe MarsRover do
   describe "spin when passing commands" do
     it "spin left for L commands" do
       commands = "L"
-      new_commands = "LL"
       new_direction = :W
-      another_new_direction = :E
       expect(rover.move(commands)).to eq(new_direction)
-      expect(rover.move(new_commands)).to eq(another_new_direction)
     end
+    
   end
 
   

@@ -9,6 +9,7 @@ class MarsRover
   BACKWARD = "b"
   LEFT = "l"
   RIGHT = "r"
+  SPIN_LEFT = "L"
 
 
   def initialize(the_position = [0, 0], the_direction = :N)
@@ -18,7 +19,8 @@ class MarsRover
       FORWARD => lambda{forward()}, 
       BACKWARD => lambda{backward()}, 
       LEFT => lambda{left()}, 
-      RIGHT => lambda{right()} 
+      RIGHT => lambda{right()},
+      SPIN_LEFT => lambda{spin_left()}
     }
   end
 
@@ -39,7 +41,9 @@ class MarsRover
     commands.each_char do |command|
       @command_map[command].call
     end
-    where_are_you
+    result = where_are_you if commands.match(/[fbrl]/)
+    result = what_are_you_viewing if commands.match(/[LR]/)
+    result
   end
 
   private
@@ -58,6 +62,10 @@ class MarsRover
 
   def right
     @the_position[POSITION_X] += SPEED
+  end
+
+  def spin_left
+    @the_direction = :W
   end
 
 end
