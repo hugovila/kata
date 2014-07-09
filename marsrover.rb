@@ -18,7 +18,7 @@ class MarsRover
   def initialize(the_position = [0, 0], the_direction = :N)
     @the_position = the_position
     @the_direction = the_direction
-    @spinner = Spin.new
+    @spinner = Spinner.new
   end
 
   
@@ -67,7 +67,7 @@ class MarsRover
 
 end
 
-class Spin 
+class Spinner
 
   WEST = :W
   EAST = :E
