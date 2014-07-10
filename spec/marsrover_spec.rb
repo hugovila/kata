@@ -82,6 +82,22 @@ describe MarsRover do
       expect(rover.move(commands)).to eq(new_direction)
       expect(rover.move(new_commands)).to eq(another_new_direction)
     end
+    it "spin left and right for LR commands" do
+      commands = "RRRL"
+      new_commands = "LRRLRRLRR"
+      new_direction = :S
+      another_new_direction = :E
+      expect(rover.move(commands)).to eq(new_direction)
+      expect(rover.move(new_commands)).to eq(another_new_direction)
+    end
+  end
+  describe "move and spin when passing commands" do
+    it "move forward, backward, left, right, and spin left and right for fblr and LR commands" do
+      commands = "fblrlfRL"
+      direction = :N
+      the_position = [-1, 1]
+      expect(rover.move(commands)).to eq(direction) && eq(the_position)
+    end
   end
 
   
