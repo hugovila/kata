@@ -27,6 +27,11 @@ class Spinner
     @the_direction = @array_direction[normalize_the_direction]
   end
 
+  def spin_right
+    @the_machine_direction -= 1
+    @the_direction = @array_direction[normalize_the_direction]
+  end
+
   private
 
   def normalize_the_direction

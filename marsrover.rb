@@ -12,8 +12,9 @@ class MarsRover
   LEFT = "l"
   RIGHT = "r"
   SPIN_LEFT = "L"
+  SPIN_RIGHT = "R"
 
-  COMMAND_MAP = { FORWARD => :forward, BACKWARD => :backward, LEFT => :left, RIGHT => :right, SPIN_LEFT => :spin_left }
+  COMMAND_MAP = { FORWARD => :forward, BACKWARD => :backward, LEFT => :left, RIGHT => :right, SPIN_LEFT => :spin_left, SPIN_RIGHT => :spin_right }
 
 
   def initialize(the_position = [0, 0], the_direction = :N)
@@ -59,6 +60,10 @@ class MarsRover
 
   def spin_left
     @spinner.spin_left
+  end
+
+  def spin_right
+    @spinner.spin_right
   end
 
 end
