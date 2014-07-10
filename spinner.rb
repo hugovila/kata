@@ -6,7 +6,7 @@ class Spinner
   NORTH = :N
   SOUTH = :S
 
-  def initialize(the_direction = :N)
+  def initialize(the_direction)
 
     @the_direction = the_direction
 

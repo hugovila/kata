@@ -18,8 +18,7 @@ class MarsRover
 
   def initialize(the_position = [0, 0], the_direction = :N)
     @the_position = the_position
-    @the_direction = the_direction
-    @spinner = Spinner.new
+    @spinner = Spinner.new the_direction
   end
 
   
@@ -28,11 +27,7 @@ class MarsRover
   end
 
   def what_are_you_viewing
-    @the_direction
-  end
-
-  def what_are_you_bearing
-    @the_direction
+    @spinner.what_are_you_viewing
   end
 
   def move(commands)
@@ -40,7 +35,7 @@ class MarsRover
       send(COMMAND_MAP[command])
     end
     result = where_are_you if commands.match(/[fbrl]/)
-    result = @spinner.what_are_you_viewing if commands.match(/[LR]/)
+    result = what_are_you_viewing if commands.match(/[LR]/)
     result
   end
 
