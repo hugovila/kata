@@ -69,6 +69,19 @@ describe MarsRover do
       expect(rover.move(commands)).to eq(new_direction)
       expect(rover.move(new_commands)).to eq(another_new_direction)
     end
+    it "spin right for R command" do
+      commands = "R"
+      new_direction = :E
+      expect(rover.move(commands)).to eq(new_direction)
+    end
+    it "spin right for R commands" do
+      commands = "R"
+      new_commands = "RR"
+      new_direction = :E
+      another_new_direction = :W
+      expect(rover.move(commands)).to eq(new_direction)
+      expect(rover.move(new_commands)).to eq(another_new_direction)
+    end
   end
 
   
